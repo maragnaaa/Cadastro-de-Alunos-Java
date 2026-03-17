@@ -24,7 +24,6 @@ public class AlunoService {
             }
 
             System.out.println("Nome inválido. Tente novamente.");
-
         }
 
         System.out.print("Digite sua nota: ");
@@ -71,29 +70,21 @@ public class AlunoService {
     }
 
     public void carregarAlunos() throws Exception {
-        this.alunos = alunoRepository.carregarAlunos();
+        List<Aluno> lista = alunoRepository.carregarAlunos();
+
+        if (lista != null) {
+            this.alunos = lista;
+        } else {
+            this.alunos = new ArrayList<>();
+        }
     }
 
     public void listarAlunos() {
         for (Aluno aluno : alunos) {
+            System.out.println(" ");
             System.out.println(aluno.getNome());
             System.out.println(aluno.getNota());
             System.out.println(aluno.getAtivo());
         }
     }
-
-    /*
-    public String mostrarNome() {
-        return aluno.getNome();
-    }
-
-    public void mostrarStatus() {
-        if (aluno.isAtivo()) {
-            System.out.println("Ativo");
-        } else {
-            System.out.println("Inativo");
-        }
-    }
-
-     */
 }

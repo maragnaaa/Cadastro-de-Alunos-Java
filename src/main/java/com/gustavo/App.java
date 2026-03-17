@@ -10,6 +10,8 @@ public class App {
         Scanner sc = new Scanner(System.in);
         AlunoService service = new AlunoService();
 
+        service.carregarAlunos();
+
         String opcao;
 
         do {

@@ -10,7 +10,7 @@ import java.util.List;
 
 public class AlunoRepository {
 
-    private static final String ARQUIVO = "alunos.json";
+    private static final String ARQUIVO = "data/alunos.json";
     private Gson gson = new Gson();
 
     public void salvarAlunos(List<Aluno> alunos) throws Exception {

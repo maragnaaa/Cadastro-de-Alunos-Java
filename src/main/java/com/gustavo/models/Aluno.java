@@ -19,8 +19,15 @@ public class Aluno {
         return nota;
     }
 
-    public boolean getAtivo() {
-        return ativo;
+    public String getAtivo() {
+        String ativado =  "sim";
+        String desativado = "não";
+
+        if (ativo) {
+            return ativado;
+        } else {
+            return desativado;
+        }
     }
 
     public boolean isAtivo() {
