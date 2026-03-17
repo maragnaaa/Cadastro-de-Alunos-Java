@@ -18,6 +18,14 @@ public class Validations {
         }
 
         nome = nome.toLowerCase();
-        return nome.matches("^[A-Za-zÀ-ÿ]{2,}(?:[ '-][A-Za-zÀ-ÿ]{2,})+$");
+        return nome.matches("^[A-Za-zÀ-ÿ]+( [A-Za-zÀ-ÿ]+)*$");
+    }
+
+    public static boolean validarOpcao(String opcao) {
+        if (opcao == null) {
+            return false;
+        }
+
+        return opcao.matches("^[1-3]$");
     }
 }

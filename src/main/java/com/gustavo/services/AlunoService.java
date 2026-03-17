@@ -74,6 +74,14 @@ public class AlunoService {
         this.alunos = alunoRepository.carregarAlunos();
     }
 
+    public void listarAlunos() {
+        for (Aluno aluno : alunos) {
+            System.out.println(aluno.getNome());
+            System.out.println(aluno.getNota());
+            System.out.println(aluno.getAtivo());
+        }
+    }
+
     /*
     public String mostrarNome() {
         return aluno.getNome();

@@ -15,6 +15,14 @@ public class Aluno {
         return nome;
     }
 
+    public double getNota() {
+        return nota;
+    }
+
+    public boolean getAtivo() {
+        return ativo;
+    }
+
     public boolean isAtivo() {
         return ativo;
     }
